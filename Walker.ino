@@ -2,20 +2,20 @@
 The Bipedal Humanoid Robot!
 By JTTM (Jonathan Currier)
 With Ian Abreu & Dyllen Garcia
-Version 1.0 Dev 3 - Walking Test
-
-**PLEASE NOTE**
-This version is just a test and is not finalized.
+Version 1.1 Dev 2 - Walking Done
 
 Versions:
+1.1 - Walking Done
 1.0 - Walking Test
 
 Changelog:
+1.1_2 - Finished the design.
+1.1_1 - Trying some different designs.
 1.0_3 - Trying to debug the walking events.
 1.0_2 - Added the first testing code.
 1.0_1 - Made the first text and code.
 
-Nothing else here yet.
+Have fun!
 */
 
 #include <Servo.h>
@@ -31,30 +31,42 @@ void setup() {
   rleg.attach(6);
   rfoot.attach(3);
 
-  lfoot.write(180);
-  lleg.write(80);
-  rleg.write(75);
-  rfoot.write(0);
+  lfoot.write(90);
+  lleg.write(90);
+  rleg.write(90);
+  rfoot.write(90);
   delay(1000);
+  
 
-  lleg.write(0);
+  
+  /*lleg.write(0);
   delay(3000);
   lfoot.write(0);
   delay(3000);
-  lleg.write(80);
+  lleg.write(90);
   delay(5000);
 
   rleg.write(180);
   delay(3000);
   lfoot.write(180);
   delay(3000);
-  rleg.write(75);
+  rleg.write(90);*/ 
 }
 
 void loop() {
   
-
-  
+  lleg.write(100);
+  rleg.write(100);
+  delay(20);
+  rfoot.write(40);
+  lfoot.write(140);
+  delay(500);
+  lleg.write(80);
+  rleg.write(80);
+  delay(20);
+  rfoot.write(140);
+  lfoot.write(40);
+  delay(500);
   /*for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
